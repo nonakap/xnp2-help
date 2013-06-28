@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="ja">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>簡単な導入方法 - インストール</title>
+  <link rel="stylesheet" type="text/css" href="../../css/common.css">
+  <style type="text/css">
+<!--
+#install blockquote {
+	color: #333333;
+	background-color: #ffffee;
+	border: #5279e7 1px solid;
+	margin: 1% 2%;
+	padding-top: 8px;
+	padding-right: 8px;
+	padding-bottom: 8px;
+	padding-left: 8px;
+}
+
+#install table {
+	font-size: 100%;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+#install th {
+	background: #ffffee;
+	vertical-align: middle;
+}
+
+#install td {
+	background: #ffffee;
+	vertical-align: middle;
+}
+-->
+  </style>
+ </head>
+
+ <body bgcolor="#ffffee" text="#000000" link="blue" vlink="purple" alink="red">
+  <h3><strong>簡単な導入方法 / インストール</strong></h3>
+
+  <dl>
+   <dt><strong>動作環境</strong></dt>
+   <dd>
+    <p>
+     Xnp2 は X Window System が動作する UNIX 系 OS で動作します。<br>
+     Linux や FreeBSD, NetBSD 等の PC-UNIX であれば多分問題無いとは思いますが、保証の限りではありません。
+    </p>
+   </dd>
+  </dl>
+
+  <dl>
+   <dt><strong>必要なソフトウェア</strong></dt>
+   <dd>
+    <ul>
+     <li>gcc</li>
+     <li><a href="http://www.gtk.org/" target="_blank">GTK+</a> 2.6 以降</li>
+    </ul>
+    <br>
+    <p>
+     以下は動作には必須ではありませんが、サウンド機能やジョイパッドを使用する場合に必要になります。
+    </p>
+    <ul>
+     <li><a href="http://libsdl.org/" target="_blank">SDL</a> (サウンド、ジョイスティックをサポートする場合に必要)</li>
+     <li><a href="http://www.libsdl.org/projects/SDL_mixer/" target="_blank">SDL_mixer</a> (フロッピーのシーク音等の PCM を再生する場合に必要)</li>
+     <li>XFree86-VidModeExtension (画面解像度を変更するフルスクリーン機能を使用する場合に必要)</li>
+    </ul>
+   </dd>
+  </dl>
+
+  <div id="install">
+  <dl>
+   <dt><strong>インストール</strong></dt>
+   <dd>
+    <ol>
+     <li>
+      <p>
+       <a href="http://www.asahi-net.or.jp/~aw9k-nnk/np2/" target="_blank">Xnp2 のページ</a>からソースを取得します。
+      </p>
+     </li>
+     <li>
+      <p>
+       ソースを展開して、展開されたソースの x11/ ディレクトリへ移動します。
+      </p>
+      <p>
+      $ <kbd>bzip2 -dc xnp2-&lt;バージョン、もしくは日付&gt;.tar.bz2 | tar xvf -</kbd><br>
+      $ <kbd>cd xnp2-&lt;バージョン、もしくは日付&gt;/x11</kbd>
+      </p>
+     </li>
+
+     <li>
+      <p>
+       configure を実行して環境に則した Makefile を作成します。<br>
+       configure が前述した SDL などの必須では無いソフトウェアを検出した場合、自動的に該当機能を有効にした Makefile が作成されます。
+      </p>
+      <p>
+       <blockquote>
+$ ./configure
+       </blockquote>
+      </p>
+      <p>
+       ※configure で指定できるオプションは configure --help を実行して表示されるヘルプを参照してください。
+      </p>
+     </li>
+     <li>
+      <p>
+       configure を実行して Makefile が作成されたら、make コマンドを実行してビルドを行います。
+      </p>
+      <p>
+       <blockquote>
+$ make
+       </blockquote>
+      </p>
+     </li>
+     <li>
+      <p>
+       ビルドが正常に終了したら、root ユーザにユーザを変更して実行ファイル等をインストールします。
+      </p>
+      <p>
+       <blockquote>
+$ su<br>
+# make install
+       </blockquote>
+      </p>
+     </li>
+    </ol>
+   </dd>
+  </dl>
+  </div>
+
+ </body>
+</html>

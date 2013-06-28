@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>簡単な導入方法 - 外部ファイル</title>
+  <link rel="stylesheet" type="text/css" href="../../css/common.css">
+ </head>
+
+ <body bgcolor="#ffffee" text="#000000" link="blue" vlink="purple" alink="red">
+  <h3><strong>簡単な導入方法 / 外部ファイル</strong></h3>
+
+  <dl>
+   <dt><strong>外部ファイル</strong></dt>
+   <dd>
+    <p>
+     ねこープロジェクトII単体でもそれなりの動作をしますが、実機 BIOS 等のファイルを用意するとより実機に近づきます。<br>
+     Xnp2 ではこれらのファイルを$(HOME)/.np2/ ディレクトリに置く事で、起動時に自動的に検出し使用します。
+    </p>
+   </dd>
+  </dl>
+
+  <a name="BIOSROM"></a>
+  <dl>
+   <dt><strong>bios.rom</strong></dt>
+   <dd>
+    <p>
+     実機の BIOS ROM をファイル化した物です。<br>
+     PC-9801 の MS-DOS 上で動作する専用のツールでファイル化して下さい。
+    </p>
+    <p>ダウンロード: <a href="http://www.yui.ne.jp/np2/tool/getbios.lzh">getbios.lzh</a> (PC-9801 シリーズ MS-DOS 用)</p>
+   </dd>
+  </dl>
+
+  <a name="FONTROM"></a>
+  <dl>
+   <dt><strong>FONT.ROM</strong></dt>
+   <dd>
+    <p>
+     実機のフォント ROM をファイル化した物です。<br>
+     PC-9801 の MS-DOS 上で動作する専用のツールでファイル化して下さい。
+    </p>
+    <p>ダウンロード: <a href="http://www.yui.ne.jp/np2/tool/getbios.lzh">getbios.lzh</a> (PC-9801 シリーズ MS-DOS 用)</p>
+    <p>FONT.ROM の他に BMP 形式のフォントファイルも使用できます。</p>
+   </dd>
+  </dl>
+
+  <a name="SOUNDROM"></a>
+  <dl>
+   <dt><strong>sound.rom</strong></dt>
+   <dd>
+    <p>
+     サウンドボードに搭載される BIOS ROM をファイル化した物です。<br>
+     PC-9801 の MS-DOS 上で動作する専用のツールでファイル化して下さい。
+    </p>
+    <p>ダウンロード: <a href="http://www.yui.ne.jp/np2/tool/getbios.lzh">getbios.lzh</a> (PC-9801 シリーズ MS-DOS 用)
+    </p>
+   </dd>
+  </dl>
+
+  <a name="RHYTHM"></a>
+  <dl>
+  <dt><strong>2608_bd.wav 〜 2608_rim.wav</strong></dt>
+  <dd>
+   <p>
+    OPNA に搭載されているリズム音源を wave 形式で録音したファイルです。<br>
+    ねこープロジェクトで使用するには 44KHz 16bit モノラル 無圧縮形式である必要があります。
+   </p>
+   <p>OPNA に搭載されているリズムは以下の通りです。</p>
+   <table cellpadding="2" cellspacing="0" border="1">
+    <tr><th>ファイル名</th><th>対応する音色</th></tr>
+    <tr><td>2608_bd.wav</td><td>バスドラム</td></tr>
+    <tr><td>2608_sd.wav</td><td>スネアドラム</td></tr>
+    <tr><td>2608_top.wav</td><tD>シンバル</td></tr>
+    <tr><td>2608_hh.wav</td><tD>ハイハット</td></tr>
+    <tr><td>2608_tom.wav</td><tD>タム</td></TR>
+    <tr><td>2608_rim.wav</td><td>リムショット</td></tr>
+    </table>
+   </dd>
+  </dl>
+
+ </body>
+</html>
+

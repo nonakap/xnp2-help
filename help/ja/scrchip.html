@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="ja">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Screen option - Chip</title>
+  <link rel="stylesheet" type="text/css" href="../../css/common.css">
+ </head>
+
+ <body bgcolor="#ffffee" text="#000000" link="blue" vlink="purple" alink="red">
+
+  <map NAME="scrchip">
+   <area href="scrvideo.html" target="main" coords="10,31,51,53" alt="Video note">
+   <area href="scrtiming.html" target="main" coords="90,31,134,53" alt="Timing note">
+  </map>
+
+  <h3><strong>Screen option - Chip</strong></h3>
+
+  <p><img src="../images/scrchip.png" border="0" alt="Screen Option - Chip" usemap="#scrchip"></p>
+
+  <a name="GDC"></a>
+  <dl>
+   <dt><strong>Graphic Display Controller</strong></dt>
+   <dd>
+    <p>エミュレーションする GDC の設定をします。</p>
+    <table cellpadding="2" cellspacing="0" border="1">
+     <tr><th>チップ</th><th>機能・搭載機種</th></tr>
+     <tr><td>μPD7220</td><td>グラフィックのスクロール分割が 4 つです。<br>主に i386 以下の PC-9801 シリーズ</td></tr>
+     <tr><td>μPD72020</td><td>グラフィックのスクロール分割が 2 つです。<br>主に i486 以降の PC-9801 / PC-9821 シリーズ</td></tr>
+    </table>
+   </dd>
+  </dl>
+
+  <a name="GRCG"></a>
+  <dl>
+   <dt><strong>Graphic Charger</strong></dt>
+   <dd>
+    <p>エミュレーションするグラフィックチャージャータイプを指定します。</p>
+    <table cellpadding="2" cellspacing="0" border="1">
+     <tr><th>チップ</th><th>機能・搭載機種</th></tr>
+     <tr><td>None</td><td>使用しません。<br>初代PC-9801等</td></tr>
+     <tr><td>GRCG</td><td>GRCGを使用します。<br>PC-9801VM</td></tr>
+     <tr><td>GRCG+</td><td>GRCGと CG-Windowを使用します。<br>実際にはこのタイプのマシンは存在しません</td></tr>
+     <tr><td>EGC</td><td>EGCを使用します。(動作が重くなります)<br>PC-9801VX以降</td></tr>
+    </table>
+    <p>
+     PC-9801VM,VX 以降の製品は GRCG はほぼ必須です。<br>
+     EGC は市販ソフトではあまり使われませんが、逆にフリーソフト・同人ソフトでは EGC を要求するものが多数あります。<br>
+     また、EGC の搭載を判定して GRCG と EGC を使い分けるソフトウェアもあります。
+    </p>
+   </dd>
+  </dl>
+
+  <dl>
+   <dt><strong>Enable 16color</strong></dt>
+   <dd>
+    <p>チェックをすると16色ボードを使用します。</p>
+    <p>
+     PC-9801VMではオプション(PC-9801-24)ボードとして存在しています。<br>
+     PC-9801VX以降では標準で装備されています。
+    </p>
+   </dd>
+  </dl>
+
+ </body>
+</html>

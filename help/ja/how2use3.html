@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="ja">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>簡単な導入方法 - ディスクイメージ</title>
+  <link rel="stylesheet" type="text/css" href="../../css/common.css">
+ </head>
+
+ <body bgcolor="#ffffee" text="#000000" link="blue" vlink="purple" alink="red">
+  <h3><strong>簡単な導入方法 / ハードディスク</strong></h3>
+
+  <dl>
+	  <dt><strong>ハードディスクイメージの作成</strong></dt>
+   <dd>
+    <p>ねこープロジェクトIIでは、フロッピーディスク同様にハードディスクも仮想ディスクファイルよりデータを読み書きを行います。</p>
+    <ol>
+     <li>MS-DOS を<a href="how2use2.html" target="main">ディスクイメージにします</a>。
+     <li>[<a href="emulate.html" target="main">Emulate</a> - NewDisk...] を選択します。<br>
+         <img src="../images/newdisk1.png" border="0" alt="[Emulate - NewDisk...]">
+     </li>
+     <li>新規ディスクイメージファイル作成ダイアログが表示されるので、「名前(N)」にハードディクスファイル名を入力して、「他のフォルダ(B)」をクリックします。<br>
+         <img src="../images/newdisk2.png" border="0" alt="Create new disk image file dialog">
+     </li>
+     <li>新規ディスクイメージファイルダイアログが拡張されるので、赤枠で囲われたプルダウンメニューをクリックします。<br>
+         <img src="../images/newdisk3-1.png" border="0" alt="Click 'D88 floppy disk image'">
+     </li>
+     <li>表示されたプルダウンメニューから「T98 hard disk image」をクリックします。<br>
+         <img src="../images/newdisk3-2.png" border="0" alt="Choose 'T98 hard disk image files'">
+     </li>
+     <li>「保存(S)」ボタンをクリックします。<br>
+         <img src="../images/newdisk3-3.png" border="0" alt="Click 'Save(S)' Button">
+     </li>
+     <li>新規ディスクイメージファイル作成ダイアログが消えて、新規ハードディクスイメージダイアログが表示されます。「HDD Size」に作成するハードディルクイメージサイズを入力、もしくはプルダウンメニューから選択します。<br>
+         <img src="../images/newhddt98.png" border="0" alt="Create new hard disk image dialog">
+     </li>
+     <li>ハードディスクサイズを指定したら、「OK(O)」ボタンをクリックします。これでハードディスクイメージファイルが作成されました。</li>
+     <li>MS-DOS のディスクイメージを [<a href="fdd.html" target="main">FDD</a> - Drive1 - Open...] で表示されるダイアログで選択します。<br>
+         <img src="../images/newdisk4.png" border="0" alt="[HardDisk - Drive1 - Open...]">
+     </li>
+     <li>作成したハードディスクイメージを [<a href="harddisk.html" target="main">HardDisk</a> - SASI-1 - Open...] で表示されるダイアログで選択します。<br>
+         <img src="../images/newdisk5.png" border="0" alt="[HardDisk - SASI-1 - Open...]">
+     </li>
+     <li>[<a href="emulate.html" target="main">Emulate</a> - Reset]を選択して、リセットをかけます。<br>
+         <img src="../images/newdisk6.png" border="0" alt="[Emulate - Reset]">
+     </li>
+     <li>MS-DOS が起動後に表示されるメニューより MS-DOS のマニュアルに従いハードディスクをフォーマットします。</li>
+    </ol>
+    <dl>
+     <dt><font color="red">注意</font></dt>
+     <dd>MS-DOS ver.6.20 の場合、インストール時に CPU が 80286 以下と表示され、インストーラは利用できません。この場合には MS-DOS システム転送済みディスクに FORMAT.EXE, HDFORMAT.EXE をコピーし、プロンプトで FORMAT を実行してハードディスクを初期化して下さい。</dd>
+    </dl>
+   </dd>
+  </dl>
+
+ </body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="ja">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Emulate - Configure</title>
+  <link rel="stylesheet" type="text/css" href="../../css/common.css">
+ </head>
+
+ <body bgcolor="#ffffee" text="#000000" link="blue" vlink="purple" alink="red">
+  <h3><strong>Emulate - Configure</strong></h3>
+
+  <p><img src="../images/cfgdlg.png" border="0" alt="Configure dialog"></p>
+
+  <a name="BASECLOCK"></a>
+  <dl>
+   <dt><strong>Base Clock</strong></dt>
+   <dd>
+    <p>
+     CPU スピードのベースクロックを指定します。<br>
+     1.9968MHz で 4/8MHz系、2.4576MHz で 5/10MHz 系になります。<br>
+     実際の CPU スピードはこの値に倍率を掛けた物になります。
+    </p>
+    <p>※設定変更はリセット後に有効になります。</p>
+   </dd>
+  </dl>
+
+  <dl>
+   <dt><strong>Multiple</strong></dt>
+   <dd>
+    <p>
+     CPU スピードの倍率を決めます。<br>
+     実際の CPU スピードはこの値にベースクロックを掛けた物になります。
+    </p>
+    <p>※設定変更はリセット後に有効になります。</p>
+   </dd>
+  </dl>
+
+  <dl>
+   <dt><strong>Architecture</strong></dt>
+   <dd>
+    <p>
+     エミュレーションモデルを指定します。<br>
+     <ul>
+      <li>PC-9801VX … i286 以降 CPU 搭載向けの仕様となります。システム起動時に FM 音源がリセットされます。</li>
+      <li>PC-286 … EPSON 互換機仕様となります。EPSON BIOS で使用される RAM (アドレス: D4000〜DFFFF) が開放されます。</li>
+     </ul>
+    </p>
+   </dd>
+  </dl>
+
+  <a name="SAMPLERATE"></a>
+  <dl>
+   <dt><strong>Sampling Rate</strong></dt>
+   <dd>
+    <p>
+     サウンドエミュレートの出力サンプリング周波数を指定します。<br>
+     一般に設定値高いほど再現率が高くなりますが、CPU パワーが必要になります。
+    </p>
+    <p>※設定変更はリセット後に有効になります。</p>
+   </dd>
+  </dl>
+
+  <a name="BUFFER"></a>
+  <dl>
+   <dt><strong>Buffer</strong></dt>
+   <dd>
+    <p>
+     サウンドエミュレートの出力バッファサイズをミリ秒で指定します。<br>
+     20〜1000ms の間を指定してください。
+    </p>
+    <p>
+     値が少ないほどサウンドの延滞が短くなりますが、CPU パワーが必要になります。<br>
+     通常は 200〜500ms を指定します。
+    </p>
+    <p>※設定変更はリセット後に有効になります。</p>
+   </dd>
+  </dl>
+
+  <dl>
+   <dt><strong>Resume</strong></dt>
+   <dd><p>チェックするとレジューム機能が有効になります。</p></dd>
+  </dl>
+
+  <dl>
+   <dt><strong>Disable MMX</strong></dt>
+   <dd>
+    <p>チェックすると MMX 命令を使用しません。</p>
+    <p>※この項目は IA-32 アーキテクチャでのみ表示されます。</p>
+   </dd>
+  </dl>
+
+ </body>
+</html>

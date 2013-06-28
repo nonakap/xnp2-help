@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="ja">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>こまった時に - エミュレーション</title>
+  <link rel="stylesheet" type="text/css" href="../../css/common.css">
+ </head>
+
+ <body bgcolor="#ffffee" text="#000000" link="blue" vlink="purple" alink="red">
+  <h3><strong>こまった時に - エミュレーション</strong></h3>
+
+  <p><strong>特定ソフトウェアが起動しない</strong></p>
+  <ul>
+   <li>メモリを 640KB にしてみてください。</li>
+   <li>実機より <a href="how2use4.html#BIOSROM" target="main">bios.rom を作成</a>して、BIOS を使用するようにしてください。</li>
+   <li>プロテクトが掛かっているかどうか確認し、プロテクトを解除してください。</li>
+  </ul>
+
+  <p><strong>特定ソフトウェアの動作が遅い</strong></p>
+  <ul>
+   <li><a href="cfgdlg.html#BASECLOCK" target="main">CPU クロックを調節</a>してください。</li>
+   <li>EGC が必須ではない場合には <a href="scrchip.html#GRCG" target="main">GRCG を選択</a>してください。</li>
+   <li>サウンドボードを使用しない、もしくは PC-9801-26K を<a href="device.html" target="main">選択</a>してください。</li>
+  </ul>
+
+  <p><strong>GDC クロックを変更したい</strong></p>
+  <ul>
+   <li>一部のソフトウェアでは、GDC クロックを指定しなければならないことがあります。<br>
+       <a href="syssetup.html" target="main">ソフトウェアディップスイッチで変更</a>してください。</li>
+  </ul>
+
+  <p><strong>描画が崩れる</strong></p>
+  <ul>
+   <li>[<a href="screen.html" target="main">Screen</a> - Disp Vsync] で表示タイミングを変更してください。</li>
+   <li><a href="scrchip.html#GDC" target="main">グラフィックコントローラを μPD7220</a> にしてください。</li>
+   <li>386 以降の BIOS を使用している場合には <a href="scrchip.html#GRCG" target="main">EGC を選択</a>してください。</li>
+  </ul>
+
+  <p><strong>色が変です</strong></p>
+  <ul>
+   <li>[<a href="screen.html" target="main">Screen</a> - Real Palettes] を指定すると改善されることがあります。</li>
+  </ul>
+
+  <p><strong>漢字ROMを認識しません</strong></p>
+  <ul>
+   <li>
+    フォントの形状をチェックして、漢字 ROM を認識するソフトウェアがあります。<BR>
+    この場合には 実機より <a href="how2use4.html#FONTROM" target="main">font.rom を作成</a>して導入してください。<BR>
+    <font size="-1">昔 LOCUS より発売されたウィザードリィ・コレクションはこれが原因で漢字が表示されなかった…。</font>
+   </li>
+  </ul>
+
+  <p><strong>サウンドが再生されない</strong></p>
+  <ul>
+   <li>メモリスイッチでサウンドボードを使用するになっているか確認してください。</li>
+   <li>実機より <a href="how2use4.html#SOUNDROM" target="main">sound.rom を作成</a>して、サウンド BIOS を使用するようにしてください。</li>
+  </ul>
+
+  <p><strong>サウンドが音飛びする</strong></p>
+  <ul>
+   <li><a href="cfgdlg.html#SAMPLERATE" target="main">Sampling Rate を 22kHz</a> (もしくは 11kHz) にしてください。</li>
+   <li><a href="cfgdlg.html#BUFFER" target="main">Buffer の値を調節</a>してください。</li>
+  </ul>
+
+  <p><strong>マウスが動かない</strong></p>
+  <ul>
+   <li>
+    [<a href="device.html" target="main">Device</a> - Mouse - Mouse mode] 、もしくはマウスの中ボタンを押してマウス占有モードに切替えてください。<br>
+    占有されていない場合にはエミュレーションのマウスは不動として扱われます。
+   </li>
+  </ul>
+
+  <p><strong>ディップスイッチを変更したい</strong></p>
+  <ul>
+   <li><a href="syssetup.html" target="main">システムセットアップメニュー</a>より変更してください。</li>
+  </ul>
+
+  <p><strong>メモリスイッチを変更したい</strong></p>
+  <ul>
+   <li><a href="syssetup.html" target="main">システムセットアップメニュー</a>より変更してください。</li>
+   <li>N88-BASIC の switch.n88 を使用してください(N88(86)-BASICのマニュアルも参照してください)。</li>
+  </ul>
+
+  <p><strong>1.44MB形式のフロッピーを扱いたい</strong>
+  <ul>
+   <li>
+    標準状態ではサポートしていません。<br>
+    <a href="othercfg.html" target="main">非公開機能</a>を参考にしてください。</li>
+  </ul>
+
+  <p><strong>リアルタイムセーブを使いたい</strong>
+  <ul>
+   <li>
+    基本的にサポートはしませんが、<a href="othercfg.html" target="main">非公開機能</a>を設定することで使用可能になります。<br>
+    但し、アプリケーションの整合性が合わなくなったり、イメージの破損に繋がる恐れもありますので注意して下さい。 
+   </li>
+  </ul>
+
+ </body>
+</html>

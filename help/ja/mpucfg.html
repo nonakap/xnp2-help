@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="ja">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>MIDI option - MPU-PC98II</title>
+  <link rel="stylesheet" type="text/css" href="../../css/common.css">
+ </head>
+
+ <body bgcolor="#ffffee" text="#000000" link="blue" vlink="purple" alink="red">
+
+  <h3><strong>MIDI option - MPU-PC98II</strong></h3>
+
+  <p><img src="../images/mpucfg.png" border="0" alt="MPU-PC98II"</p>
+
+  <dl>
+   <dt><strong>I/O port</strong></dt>
+   <dd><p>MPU-PC98II の I/O ポートを設定します。</p></dd>
+  </dl>
+
+  <dl>
+   <dt><strong>Interrupt</strong></dt>
+   <dd><p>MPU-PC98II の割り込み番号を設定します。</p></dd>
+  </dl>
+
+  <dl>
+   <dt><strong>Default</strong></dt>
+   <dd><p>MPU-PC98II の設定を工場出荷状態に戻します。</p></dd>
+  </dl>
+
+  <dl>
+   <dt><strong>MIDI-OUT device</strong></dt>
+   <dd><p>MIDI-OUT デバイスファイルのパスを設定します。</p></dd>
+  </dl>
+
+  <dl>
+   <dt><strong>MIDI-IN device</strong></dt>
+   <dd><p>MIDI-IN デバイスファイルのパスを設定します。<br>(現在使用できません。)</p></dd>
+  </dl>
+
+  <dl>
+   <dt><strong>MIDI-OUT</strong></dt>
+   <dd>
+    <p>MIDI-OUT のデバイスを指定します。</p>
+    <table cellpadding="2" cellspacing="0" border="1">
+     <tr><th>Device</th><th>対応する MIDI-OUT デバイス</th></tr>
+     <tr><td>N/C</td><td>未接続状態になります。</td></tr>
+     <tr><td>MIDI-OUT device</td><td>MIDI-OUT device で指定した MIDI デバイスを使用します。</td></tr>
+     <tr><td>VERMOUTH</td><td>MIDI 再生に <a href="vermouth.html" target="main">Vermouth</a> を使用します。</td></tr>
+    </table>
+   </dd>
+  </dl>
+
+  <dl>
+   <dt><strong>MIDI-IN</strong></dt>
+   <dd>
+    <p>MIDI-IN のデバイスを指定します。<br>(現在使用できません。)</p>
+    <table cellpadding="2" cellspacing="0" border="1">
+     <tr><th>Device</th><th>対応する MIDI-IN デバイス</th></tr>
+     <tr><td>N/C</td><td>未接続状態になります。</td></tr>
+     <tr><td>MIDI-IN device</td><td>MIDI-IN device で指定した MIDI デバイスを使用します。</td></tr>
+    </table>
+   </dd>
+  </dl>
+
+  <dl>
+   <dt><strong>Module</strong></dt>
+   <dd><p>接続している MIDI 音源を指定します。<br>この指定はエミュレーションリセット、終了、MIDI Panic において MIDI 音源をリセットする為に使用されます。</p></dd>
+  </dl>
+
+  <dl>
+   <dt><strong>Use program define file</strong></dt>
+   <dd><p>MIMPI DEF ファイルを指定して、音色番号の振り替えを行ないます。<br>この機能により音色番号が異なる音源間で音色を合せる事ができます。</p></dd>
+  </dl>
+
+ </body>
+</html>

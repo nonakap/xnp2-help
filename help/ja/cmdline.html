@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="ja">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>コマンドラインオプション</title>
+  <link rel="stylesheet" type="text/css" href="../../css/common.css">
+  <style type="text/css">
+<!--
+blockquote {
+	color: #333333;
+	background-color: #ffffee;
+	border: #5279e7 1px solid;
+	margin: 1% 2%;
+	padding-top: 8px;
+	padding-left: 8px;
+	padding-right: 8px;
+	padding-bottom: 8px;
+}
+-->
+  </style>
+ </head>
+
+ <body bgcolor="#ffffee" text="#000000" link="blue" vlink="purple" alink="red">
+  <h3><strong>コマンドラインオプション</strong></h3>
+
+  <dl>
+   <dt><strong>Usage:</strong></dt>
+   <dd>
+    <p>
+     <blockquote>
+      xnp2 [--config <i>filename</i>] [--timidity-config <i>filename</i>] [ <i>FD1 image</i> [ <i>FD2 image</i> [ <i>FD3 image</i> [ <i>FD4 image</i> ] ] ] ]
+     </blockquote>
+    </p>
+   </dd>
+  </dl>
+
+  <dl>
+   <dt><strong>オプション説明</strong></dt>
+   <dd>
+    <dl>
+     <dt>--config &lt;filename&gt;</dt>
+     <dd>
+      起動時に読み込む設定ファイルを指定します。<br>非指定時は $(HOME)/.np2/np2rc を読み込みます。
+     </dd>
+    </dl>
+    <dl>
+     <dt>--timidity-config &lt;filename&gt;</dt>
+     <dd>
+     ねこープロジェクトに内蔵されている TiMidity 互換のソフトウェア MIDI 音源で使用する音源設定ファイルを指定します。<br>非指定時は $(HOME)/.np2/timidity.cfg を読み込みます。
+     </dd>
+    </dl>
+   </dd>
+  </dl>
+
+ </body>
+</html>

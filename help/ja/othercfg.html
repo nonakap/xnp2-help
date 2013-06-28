@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="ja">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>非公開機能</title>
+  <link rel="stylesheet" type="text/css" href="../../css/common.css">
+ </head>
+
+ <body bgcolor="#ffffee" text="#000000" link="blue" vlink="purple" alink="red">
+  <h3><strong>非公開機能</strong></h3>
+
+  <dl>
+   <dd>
+    <p>ねこープロジェクトIIでは設定ファイルを直接操作することにより、非公開機能を操作することができます。<br>
+       キーは設定ファイルの [NekoProjectII] へ追加してください。<br>
+    <p>これらの機能は基本的に無保証・無サポートです。予告なしに変更・削除される可能性があります。</p>
+
+    <p><strong>ねこープロジェクトII共通スイッチ</strong></p>
+    <table cellpadding="2" cellspacing="0" border="1">
+     <tr><th>キー名</th><th>機能</th><th>デフォルト値</th></tr>
+     <tr><td>ITF_WORK</td><td>false で ITF エミュレーションを抑制する。</td><td>true</td></tr>
+     <tr><td>xspeaker</td><td>true でスピーカ出力を左右出力を反転する。</td><td>false</td></tr>
+     <tr><td>BG_COLOR</td><td>液晶モードのバックグラウンドの色 (RRGGBB 24bit値)</td><td>0x000000</td></tr>
+     <tr><td>FG_COLOR</td><td>液晶モードのフォアグラウンドの色 (RRGGBB 24bit値)</td><td>0xffffff</td></tr>
+     <tr><td>USE144FD</td><td>true で 1.44MB 対応 3 モードFDD をサポートする。</td><td>false</td></tr>
+     <tr><td>FDDRIVE3</td><td>true でドライブ 3 を有効にする。</td><td>false</td></tr>
+     <tr><td>FDDRIVE4</td><td>true でドライブ 4 を有効にする。</td><td>false</td></tr>
+     <tr><td>hdrvroot</td><td>仮想ドライブのルートディレクトリ</td><td>無し (仮想ドライブは使用できない)</td></tr>
+     <tr><td>hdrv_acc</td><td>仮想ドライブのアクセス権<br>bit0: 読み込み権<br>bit1: 書き込み権</td><td>1 (読み込み専用)</td></tr>
+     <tr><td>biospath</td><td>BIOS ROM イメージファイルが置かれているディレクトリを指定する。</td><td>false</td></tr>
+    </table>
+    <br>
+
+    <p><strong>Xnp2 固有スイッチ</strong></p>
+    <table cellpadding="2" cellspacing="0" border="1">
+     <tr><th>キー名</th><th>機能</th><th>デフォルト値</th></tr>
+     <tr><td>np2title</td><td>Xnp2 のキャプション文字列の指定する。</td><td>Neko Project II</td></tr>
+     <tr><td>paddingx</td><td>クライアント境界の横サイズを指定する。</td><td>2</td></tr>
+     <tr><td>paddingy</td><td>クライアント境界の縦サイズを指定する。</td><td>2</td></tr>
+     <tr>
+      <td>keyboard</td>
+      <td>
+       キーボード種別を指定する。<br>
+       106 : 日本語 106 キーボード<br>
+       101 : 101 キーボード<br>
+      </td>
+      <td>106</td>
+     </tr>
+     <tr>
+      <td>dinterp_</td>
+      <td>
+       エミュレーションウィンドウのサイズを 640x400 以外に設定した場合の補間モードを指定する。<br>
+       nearest  : 隣接するピクセルを使って補間する。動作は高速であるが低品質である。<br>
+       tiles    : 補間は行わずに PostScript 画像の処理を正確に模擬する。<br>
+       bilinear : 最適な品質とスピードを両立したバイリニア補間を使用する。<br>
+       hyper    : 低速で高品質な補間を行う。<br>
+      </td>
+      <td>nearest</td>
+     </tr>
+     <tr><td>I286SAVE</td><td>true でデバガを有効にする。</td><td>false</td></tr>
+     <tr><td>STATSAVE</td><td>true でどこでもセーブを10スロット追加する。</td><td>false</td></tr>
+     <tr><td>READONLY</td><td>true で動作中に変更した設定を設定ファイルに反映しない。</td><td>false</td></tr>
+    </table>
+    <br>
+
+   </dd>
+  </dl>
+
+ </body>
+</html>

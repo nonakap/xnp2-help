@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="ja">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>簡単な導入方法 - ディスクイメージ</title>
+  <link rel="stylesheet" type="text/css" href="../../css/common.css">
+ </head>
+
+ <body bgcolor="#ffffee" text="#000000" link="blue" vlink="purple" alink="red">
+  <h3><strong>簡単な導入方法 / ディスクイメージ</strong></h3>
+
+  <dl>
+   <dt><strong>ディスクイメージ</strong></dt>
+   <dd>
+    <p>
+     ねこープロジェクトIIでは、直接 FDD からデータの読み書きは行なわず、ディスクイメージ(仮想ディスクファイル)よりデータの読み書きを行います。<br>
+     ねこープロジェクトIIはベタ形式および D88 形式のフォーマットを使用します。
+    </p>
+    <p>
+     PC-9801 シリーズの場合は <a href="tools.html#make_hd" target="main">make_hd</a>、PC-AT マシンでは <a href="tools.html#ditt" target="main">DITT</a> で D88 形式でディスクイメージを作成して下さい。
+    </p>
+    <p>
+     Windows95 ではベタ形式の作成が可能な <a href="tools.html#vifc" target="main">VFIC</A>、<a href="tools.html#diskimg" target="main">ディスク イマージュ</a>をご利用下さい。
+    </p>
+    <p>
+     UNIX では dd を使用してディスクイメージを作成する事が可能です。
+    </p>
+   </dd>
+  </dl>
+
+  <dl>
+   <dt><strong>ディスクイメージの作成方法</strong></dt>
+   <dd>
+    <p><font color="#800000">※ イメージ化する場合には必ずライトプロテクトをして下さい。</font></p>
+    <p><strong>make_hd を用いて D88 形式のディスクイメージを作成</strong></p>
+    <ol>
+     <li>make_hd の存在するディレクトリに移動します。</li>
+     <li>ドライブにイメージ化するフロッピーディスクを挿入します。</li>
+     <li>make_hd を実行します。<br>
+         2HD ディスクをイメージ化するには
+         「make_hd <font color="#008000"><i>ドライブ</i></font> -w -f<font color="#008000"><i>ファイル名</i></font>.d88 -h」
+         とタイプします。</li>
+     <li>作成したイメージファイルを UNIX 上のファイルシステムへ転送します。</li>
+    </ol>
+    <br>
+
+    <p><strong>ディスク イマージュを用いてベタ形式のディスクイメージを作成</strong></p>
+    <p>※ ベタイメージはファイルサイズが 1,261,568 バイトのイメージファイルを指します。</p>
+    <p>PC-AT マシンでは 3 モードドライブが搭載されている事が必要です。2 モードドライブでの 2HD ディスクは 1.44MB 形式のイメージのみ作成が可能です。</p>
+    <ol>
+     <li>ディスク イマージュを起動し設定します。<br>
+         フロッピーディスクを挿入したドライブとディスクタイプ (MS-DOS の 1.2MB フォーマットは 1.25MB)を指定して FD -&gt; HDをクリックします。</li>
+     <li>ファイル名を指定します。<br>
+         保存するファイル名指定のダイアログが表示されますので保存するファイル名を指定します。</li>
+     <li>拡張子を変更します。<br>
+         ディスクイマージュの拡張子は標準で bin となっていますが、一般的なベタイメージの拡張子は xdf, dup 等ですので、これらに変更します。</li>
+     <li>作成したイメージファイルを UNIX 上のファイルシステムへ転送します。</li>
+    </ol>
+    <br>
+
+    <p><strong>dd を用いてベタ形式のディスクイメージを作成</strong></p>
+    <p>使用する機種のフロッピードライブが 1.25MB 形式に対応している事が必要です。</p>
+    <ol>
+     <li>dd if=<font color="#008000"><i>フロッピーデバイス</i></font> of=<font color="#008000"><i>イメージファイル名</i></font></li>
+    </ol>
+   </dd>
+  </dl>
+
+ </body>
+</html>
